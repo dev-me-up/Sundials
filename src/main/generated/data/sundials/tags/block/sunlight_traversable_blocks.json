@@ -1,0 +1,12 @@
+{
+  "values": [
+    "#sundials:grate_blocks",
+    "#minecraft:trapdoors",
+    "#minecraft:climbable",
+    "#minecraft:leaves",
+    "#minecraft:banners",
+    "#c:glass_blocks",
+    "#c:glass_panes",
+    "minecraft:ice"
+  ]
+}

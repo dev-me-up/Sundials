@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "sundials",
+  "version": "${version}",
+  "name": "Sundials",
+  "description": "Adds sundials to Minecraft.",
+  "authors": [
+    "dev-me-up"
+  ],
+  "contact": {
+    "sources": "https://github.com/devmeup/sundials"
+  },
+  "license": "MIT",
+  "icon": "assets/sundials/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.github.devmeup.sundials.SundialsClient"
+    ],
+    "main": [
+      "com.github.devmeup.sundials.Sundials"
+    ],
+    "fabric-datagen": [
+      "com.github.devmeup.sundials.SundialsDataGenerator"
+    ],
+    "modmenu": [
+      "com.github.devmeup.sundials.config.ModMenuIntegration"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "yet_another_config_lib_v3": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "update_checker": true
+    }
+  }
+}

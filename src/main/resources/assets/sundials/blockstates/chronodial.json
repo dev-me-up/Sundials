@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "sun_form=true": {
+      "model": "sundials:block/chronodial_sun_form"
+    },
+    "sun_form=false": {
+      "model": "sundials:block/chronodial_moon_form"
+    }
+  }
+}

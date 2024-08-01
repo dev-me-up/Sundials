@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "sundials:sundial_temple",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 703109535,
+    "spacing": 30,
+    "separation": 8,
+    "type": "minecraft:random_spread"
+  }
+}

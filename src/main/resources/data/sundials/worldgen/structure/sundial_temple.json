@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:jigsaw",
+    "biomes": "#sundials:has_structure/sundial_temple",
+    "step": "surface_structures",
+    "spawn_overrides": {},
+    "start_pool": "sundials:temple_pool",
+    "size": 1,
+    "terrain_adaptation": "beard_thin",
+    "start_height": {
+      "absolute": 0
+    },
+    "project_start_to_heightmap": "WORLD_SURFACE",
+    "max_distance_from_center": 80,
+    "use_expansion_hack": false
+  }

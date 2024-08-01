@@ -1,0 +1,42 @@
+{
+    "name": "sundials:temple_pool",
+    "fallback": "minecraft:empty",
+    "elements": [
+        {
+            "weight": 10,
+            "element": {
+                "location": "sundials:large_sundial_temple/large_sundial_temple_intact",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 15,
+            "element": {
+                "location": "sundials:large_sundial_temple/large_sundial_temple_ruins",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 25,
+            "element": {
+                "location": "sundials:small_sundial_temple/small_sundial_temple_intact",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        },
+        {
+            "weight": 30,
+            "element": {
+                "location": "sundials:small_sundial_temple/small_sundial_temple_ruins",
+                "processors": "minecraft:empty",
+                "projection": "rigid",
+                "element_type": "minecraft:single_pool_element"
+            }
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+  "itemgroup.sundials_blocks": "Sundials Blocks",
+
+  "block.sundials.sundial": "Sundial",
+  "block.sundials.chronodial": "Chronodial",
+
+  "effect.sundials.temporal_shock": "Temporal Shock",
+
+  "death.attack.temporal_damage": "%s ran out of time",
+
+  "sounds.sundials.tick_tock": "Chronodial shifts time"
+}
