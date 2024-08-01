@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.minecraft.registry.RegistryWrapper;
 
-// TODO: add block drop loot table
 import java.util.concurrent.CompletableFuture;
 
 import static com.github.devmeup.sundials.references.Reference.MOD_ID;
