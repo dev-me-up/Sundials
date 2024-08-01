@@ -8,7 +8,9 @@
     "dev-me-up"
   ],
   "contact": {
-    "sources": "https://github.com/devmeup/sundials"
+    "homepage": "https://modrinth.com/mod/Sundials",
+    "sources": "https://github.com/dev-me-up/Sundials",
+    "issues": "https://github.com/dev-me-up/Sundials/issues"
   },
   "license": "MIT",
   "icon": "assets/sundials/icon.png",
