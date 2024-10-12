@@ -4,7 +4,7 @@
 
 <a href="">![Fabric](https://img.shields.io/badge/Loader-Fabric-blue)</a>
 <a href="">![License](https://img.shields.io/badge/License-MIT-red)</a>
-<a href="">![Minecraft](https://img.shields.io/badge/Minecraft-1.21-forest_green)</a>
+<a href="">![Minecraft](https://img.shields.io/badge/Minecraft-1.21.x-forest_green)</a>
 <a href="https://www.curseforge.com/minecraft/mc-mods/sundials">![CurseForge](https://img.shields.io/badge/CurseForge-Download-orange?logo=curseforge&link=https%3A%2F%2Fwww.curseforge.com%2Fminecraft%2Fmc-mods%2Fsundials)</a>
 <a href="https://modrinth.com/mod/sundials">![Modrinth](https://img.shields.io/badge/Modrinth-Download-green?logo=modrinth&color=1BD96A)</a>
 
