@@ -1,5 +1,5 @@
 {
-  "itemgroup.sundials_blocks": "Sundials Blocks",
+  "itemGroup.sundials_blocks_group": "Sundials Blocks",
 
   "block.sundials.sundial": "Sundial",
   "block.sundials.chronodial": "Chronodial",

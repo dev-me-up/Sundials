@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "*": {
-      "item": "minecraft:nether_star"
-    },
-    "G": {
-      "item": "minecraft:gold_ingot"
-    },
-    "S": {
-      "item": "sundials:sundial"
-    }
+    "*": "minecraft:nether_star",
+    "G": "minecraft:gold_ingot",
+    "S": "sundials:sundial"
   },
   "pattern": [
     "G",

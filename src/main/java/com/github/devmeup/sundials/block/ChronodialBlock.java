@@ -12,24 +12,25 @@ import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
-import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.EnumProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 
 import java.util.Random;
 
 public class ChronodialBlock extends SundialBlock {
-    private static final DirectionProperty FACING = Properties.FACING;
+    private static final EnumProperty<Direction> FACING = Properties.FACING;
     private static final BooleanProperty WATERLOGGED = Properties.WATERLOGGED;
     private static final BooleanProperty SUN_FORM = BooleanProperty.of("sun_form");
 
     public ChronodialBlock(Settings settings) {
         super(settings);
-        setDefaultState(getDefaultState().with(SUN_FORM, true));
+        setDefaultState(getStateManager().getDefaultState().with(SUN_FORM, true));
     }
 
     @Override
@@ -37,21 +38,23 @@ public class ChronodialBlock extends SundialBlock {
         boolean damageOnUse = ModConfig.CONFIG.instance().applyTemporalShockDamage;
         int damage = ModConfig.CONFIG.instance().temporalShockDamage;
 
-        if (world.isClient()) {
-            return ActionResult.CONSUME;
-        }
-        if (player.isSneaking()) {
-            changeForm(state, world, pos);
-        } else {
-            if (hasSkyAccess(world, pos)) {
-                if (damageOnUse) {
-                    player.damage(ModDamageTypes.of(world, ModDamageTypes.TEMPORAL_DAMAGE), (float)damage);
-                }
-                changeTime(state, world, pos);
+        if (world instanceof ServerWorld) {
+            if (player.isSneaking()) {
+                changeForm(state, world, pos);
             } else {
-                player.sendMessage(Text.literal("You are unable to change the time."));
+                if (hasSkyAccess(world, pos)) {
+                    if (damageOnUse) {
+                        if (world instanceof ServerWorld serverWorld) {
+                            player.damage(serverWorld, ModDamageTypes.of(world, ModDamageTypes.TEMPORAL_DAMAGE), (float)damage);
+                        }
+                    }
+                    changeTime(state, world, pos);
+                } else {
+                    player.sendMessage(Text.literal("You are unable to change the time."), true);
+                }
             }
         }
+
         return ActionResult.SUCCESS;
     }
 
@@ -65,10 +68,11 @@ public class ChronodialBlock extends SundialBlock {
     }
 
     private void changeTime(BlockState state, World world, BlockPos pos) {
-        ServerWorld serverWorld = (ServerWorld)world;
-        serverWorld.setTimeOfDay(state.get(SUN_FORM) ? 0: 13000); // Set to day if sun form, night if moon form
-        serverWorld.spawnParticles(ParticleTypes.SMOKE, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 10,0.0D, 0.1D, 0.0D, 0.05D);
-        serverWorld.playSound(null, pos, ModSounds.TICK_TOCK, SoundCategory.BLOCKS, 1.0F, new Random().nextFloat(1.0F, 1.1F));
+        if (world instanceof ServerWorld serverWorld) {
+            serverWorld.setTimeOfDay(state.get(SUN_FORM) ? 0: 13000); // Set to day if sun form, night if moon form
+            serverWorld.spawnParticles(ParticleTypes.SMOKE, pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5, 10,0.0D, 0.1D, 0.0D, 0.05D);
+            serverWorld.playSound(null, pos, ModSounds.TICK_TOCK, SoundCategory.BLOCKS, 1.0F, new Random().nextFloat(1.0F, 1.1F));
+        }
     }
 
     @Override
