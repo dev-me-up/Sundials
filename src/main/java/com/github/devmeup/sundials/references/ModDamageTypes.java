@@ -13,16 +13,12 @@ import static com.github.devmeup.sundials.references.Reference.MOD_ID;
 public class ModDamageTypes {
     public static final RegistryKey<DamageType> TEMPORAL_DAMAGE = RegistryKey.of(RegistryKeys.DAMAGE_TYPE, Identifier.of(MOD_ID, "temporal_damage"));
 
-    public ModDamageTypes() {
-        throw new AssertionError();
-    }
-
-    public static void register() {
+    public static void initialize() {
         LOGGER.info(MOD_ID + " --- Registering damage types for mod...");
     }
 
     public static DamageSource of(World world, RegistryKey<DamageType> key) {
-        return new DamageSource(world.getRegistryManager().get(RegistryKeys.DAMAGE_TYPE).entryOf(key));
+        return new DamageSource(world.getRegistryManager().getOptionalEntry(key).orElse(null));
     }
 
 }

@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "I": {
-      "item": "minecraft:iron_ingot"
-    },
-    "P": {
-      "item": "minecraft:quartz_pillar"
-    },
-    "S": {
-      "item": "minecraft:quartz_slab"
-    }
+    "I": "minecraft:iron_ingot",
+    "P": "minecraft:quartz_pillar",
+    "S": "minecraft:quartz_slab"
   },
   "pattern": [
     "SIS",

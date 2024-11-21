@@ -10,7 +10,7 @@ import static com.github.devmeup.sundials.references.Reference.identifier;
 public class ModSounds {
     public static final SoundEvent TICK_TOCK = registerSoundEvent("tick_tock");
 
-    public static void register() {
+    public static void initialize() {
         LOGGER.info(Reference.MOD_ID + " --- Registering sounds for mod...");
     }
 

@@ -11,10 +11,10 @@ public class Sundials implements ModInitializer {
     public void onInitialize() {
         LOGGER.info(Reference.MOD_ID + " --- Initializing mod...");
 
-        ModBlocks.register();
-        ModDamageTypes.register();
-        ModItemGroups.register();
-        ModSounds.register();
+        ModBlocks.initialize();
+        ModDamageTypes.initialize();
+        ModItemGroups.initialize();
+        ModSounds.initialize();
 
         ModConfig.CONFIG.load();
     }
