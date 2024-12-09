@@ -1,4 +1,4 @@
-package com.github.devmeup.sundials.datagen.tags;
+package com.github.devmeup.sundials.datagen;
 
 import com.github.devmeup.sundials.references.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;

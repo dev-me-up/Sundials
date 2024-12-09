@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "sundials:block/chronodial_sun_form"
+  }
+}

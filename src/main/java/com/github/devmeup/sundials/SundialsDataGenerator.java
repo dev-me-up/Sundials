@@ -1,9 +1,6 @@
 package com.github.devmeup.sundials;
 
-import com.github.devmeup.sundials.datagen.loot_table.ModLootTableProvider;
-import com.github.devmeup.sundials.datagen.recipe.ModRecipeProvider;
-import com.github.devmeup.sundials.datagen.tags.ModBlockTagProvider;
-import com.github.devmeup.sundials.datagen.tags.ModFluidTagProvider;
+import com.github.devmeup.sundials.datagen.*;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;
@@ -27,4 +24,5 @@ public class SundialsDataGenerator implements DataGeneratorEntrypoint {
     public void buildRegistry(RegistryBuilder registryBuilder) {
         LOGGER.info(MOD_ID + " --- Register data generation features for mod...");
     }
+
 }
