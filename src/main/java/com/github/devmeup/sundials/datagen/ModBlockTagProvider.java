@@ -1,4 +1,4 @@
-package com.github.devmeup.sundials.datagen.tags;
+package com.github.devmeup.sundials.datagen;
 
 import com.github.devmeup.sundials.references.ModBlocks;
 import com.github.devmeup.sundials.references.ModTags;

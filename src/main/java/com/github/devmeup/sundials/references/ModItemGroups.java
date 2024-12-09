@@ -16,7 +16,7 @@ import static com.github.devmeup.sundials.references.Reference.MOD_ID;
 public class ModItemGroups {
     public static final RegistryKey<ItemGroup> SUNDIAL_BLOCKS_GROUP_KEY = RegistryKey.of(
             Registries.ITEM_GROUP.getKey(),
-            Identifier.of(Reference.MOD_ID, "sundials_blocks"));
+            Identifier.of(MOD_ID, "sundials_blocks"));
 
     public static final ItemGroup SUNDIALS_BLOCKS_GROUP = FabricItemGroup.builder()
             .icon(() -> new ItemStack(ModBlocks.SUNDIAL))

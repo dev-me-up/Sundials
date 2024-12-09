@@ -1,4 +1,4 @@
-package com.github.devmeup.sundials.datagen.loot_table;
+package com.github.devmeup.sundials.datagen;
 
 import com.github.devmeup.sundials.references.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
